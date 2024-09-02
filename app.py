@@ -28,7 +28,7 @@ st.set_page_config(layout="wide")
 local_css("style.css")
 
 # Load Lottie animation
-lottie_contact = load_lottieurl("https://lottie.host/f6213881-ec5d-492b-ae84-bd0cc18145cc/gUGgrBbGMO.json")
+lottie_contact = load_lottieurl("https://lottie.host/16479003-a806-40f7-99da-ae866bdf44b4/FuDw7bC6RU.json")
 
 # Main content of the portfolio
 st.write("##")
