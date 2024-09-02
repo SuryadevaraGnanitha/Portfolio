@@ -1,0 +1,79 @@
+/* Apply a grey background to the whole application */
+body {
+    background-color: #828386; /* Light grey background */
+    font-family: 'Arial', sans-serif; /* A clean font for the application */
+}
+
+/* Container for the main content with a white background and shadow */
+.container {
+    border-radius: 8px;
+    background-color: #ffffff; /* White background for content containers */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
+    margin-bottom: 20px;
+}
+
+/* Style inputs with type="text", select elements, textareas, and email */
+input[type=text], input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Use border-box for better layout control */
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #fafafa; /* Slightly grey background for inputs */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit], button[type=submit] {
+    background-color: #04AA6D; /* Green background */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover, button[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Style the option menu for a clean look */
+.stOptionMenu div {
+    background-color: #ffffff; /* White background for the menu */
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style headers for better visual hierarchy */
+h1, h2, h3, h4, h5, h6 {
+    color: #333333; /* Dark grey text color */
+}
+
+/* Increase the size of the expanders (drop-downs) */
+.stExpander {
+    background-color: #f5f5f5; /* Background color of the expander */
+    border-radius: 8px;
+    padding: 20px; /* Increase padding for a larger clickable area */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.stExpanderHeader {
+    font-size: 20px; /* Increase the font size of the expander header */
+    font-weight: bold;
+    color: #333333; /* Dark grey text color */
+    padding: 10px 0; /* Increase padding inside the header */
+}
+
+.stExpanderContent {
+    font-size: 18px; /* Increase the font size of the expander content */
+    padding: 10px 0; /* Increase padding for better readability */
+}
+
