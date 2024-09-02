@@ -1,6 +1,6 @@
 /* Apply a grey background to the whole application */
 body {
-    background-color: #828386; /* Light grey background */
+    background-color: #d6d2d2; /* Light grey background */
     font-family: 'Arial', sans-serif; /* A clean font for the application */
 }
 
@@ -16,19 +16,20 @@ body {
 /* Style inputs with type="text", select elements, textareas, and email */
 input[type=text], input[type=email], select, textarea {
     width: 100%;
+    color: black;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     border-radius: 4px;
     box-sizing: border-box; /* Use border-box for better layout control */
     margin-top: 10px;
     margin-bottom: 20px;
-    background-color: #fafafa; /* Slightly grey background for inputs */
+    background-color: #ffffff; /* Slightly grey background for inputs */
 }
 
 /* Style the submit button with a specific background color etc */
 input[type=submit], button[type=submit] {
     background-color: #04AA6D; /* Green background */
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -52,12 +53,14 @@ input[type=submit]:hover, button[type=submit]:hover {
 
 /* Style headers for better visual hierarchy */
 h1, h2, h3, h4, h5, h6 {
-    color: #333333; /* Dark grey text color */
+    color: #ffffff; /* Dark grey text color */
 }
 
 /* Increase the size of the expanders (drop-downs) */
 .stExpander {
-    background-color: #f5f5f5; /* Background color of the expander */
+    font-size: 30px;
+    background-color: black; /* Background color of the expander */
+    font-weight: bold;
     border-radius: 8px;
     padding: 20px; /* Increase padding for a larger clickable area */
     margin-bottom: 20px;
@@ -66,14 +69,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stExpanderHeader {
-    font-size: 20px; /* Increase the font size of the expander header */
+    font-size: 25px; /* Increase the font size of the expander header */
     font-weight: bold;
-    color: #333333; /* Dark grey text color */
+    color: white; /* Dark grey text color */
     padding: 10px 0; /* Increase padding inside the header */
 }
 
 .stExpanderContent {
-    font-size: 18px; /* Increase the font size of the expander content */
+    font-size: 30px; /* Increase the font size of the expander content */
     padding: 10px 0; /* Increase padding for better readability */
 }
 

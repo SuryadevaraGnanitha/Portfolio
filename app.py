@@ -4,14 +4,14 @@ from streamlit_lottie import st_lottie
 import requests
 from PIL import Image
 
-
+# Function to load Lottie animation from URL
 def load_lottieurl(url):
     r = requests.get(url)
     if r.status_code != 200:
         return None
     return r.json()
 
-
+# Function to apply local CSS
 def local_css(file_name):
     try:
         with open(file_name) as f:
@@ -21,42 +21,56 @@ def local_css(file_name):
     except Exception as e:
         st.error(f"Error loading CSS file: {str(e)}")
 
-
+# Set page configuration
 st.set_page_config(layout="wide")
-# Load CSS file from the same directory
-local_css("./style.css")
 
-lottie_contact = load_lottieurl(
-    "https://lottie.host/f6213881-ec5d-492b-ae84-bd0cc18145cc/gUGgrBbGMO.json"
-)
+# Load CSS file
+local_css("style.css")
 
-st.title("Portfolio website")
+# Load Lottie animation
+lottie_contact = load_lottieurl("https://lottie.host/f6213881-ec5d-492b-ae84-bd0cc18145cc/gUGgrBbGMO.json")
+
+# Main content of the portfolio
+st.write("##")
+st.title("Portfolio Website")
 st.header("Gnanitha Suryadevara")
 st.subheader("Hey Guys :wave:")
 st.write("---")
 
-selected = option_menu(
-    menu_title=None,
-    options=["About", "Project", "Contact"],
-    icons=["person", "code-slash", "chat-left-text-fill"],
-    orientation="horizontal",
-)
+# Option Menu
+with st.container():
+    selected = option_menu(
+        menu_title=None,
+        options=['About', 'Project', 'Contact'],
+        icons=['person', 'code-slash', 'chat-left-text-fill'],
+        orientation='horizontal'
+    )
 
-if selected == "About":
+# About Section
+if selected == 'About':
     with st.container():
         col1, col2 = st.columns(2)
         with col1:
+            st.write("##")
             st.subheader("I am Gnanitha Suryadevara")
             st.title("Undergrad at Hyderabad Institute Of Technology and Management")
+            # Add Download Resume Button
+            with open("gnanitha_suryadevara_resume.pdf", "rb") as file:
+                st.download_button(
+                    label="Download Resume",
+                    data=file,
+                    file_name="./gnanitha_suryadevara_resume.pdf",
+                    mime="application/pdf"
+                )
         with col2:
             st.image("pp.jpeg", caption="Gnanitha Suryadevara", width=500)
     st.write("---")
 
+    # Education and Experience Section
     with st.container():
         col3, col4 = st.columns(2)
         with col3:
-            st.subheader(
-                """
+            st.subheader("""
                         Education
                         - HITAM
                             - Bachelor of Engineering-Computer science (Artificial Intelligence and Machine learning)
@@ -64,19 +78,16 @@ if selected == "About":
                             - Intermediate
                         - Ravindra Bharathi School
                             - Xth
-                        """
-            )
+                        """)
         with col4:
-            st.subheader(
-                """
+            st.subheader("""
                         Experience
                         - IBM skill build Project-Based internship
                             - 6 weeks
                             - online
                         - BASKETHUNT Pvt Lim (IT AND Web development) internship
                             - 2 months
-                            - online"""
-            )
+                            - online""")
     st.write("---")
     with st.container():
         col5, col6 = st.columns(2)
@@ -100,30 +111,27 @@ if selected == "About":
             with st.expander("NPTEL PROGRAMMING IN JAVA"):
                 st.image("./NPTEL_JAVA.jpg")
 
-
-                     
-
-
-if selected == "Project":
+# Project Section
+if selected == 'Project':
     with st.container():
         st.header("My Projects")
         st.write("##")
+
         # Language Detection Project with a drop-down
         with st.expander("Language Detection"):
-            st.write(
-                """
+            st.write("""
                 **Description:**
                 The Language Detection project is a machine learning-based project that identifies the language of a given text. 
-                The model was trained on a largex dataset consisting of text samples from various languages. 
+                The model was trained on a large dataset consisting of text samples from various languages. 
                 It utilizes natural language processing techniques to classify the language with high accuracy.
-                """
-            )
+                """)
+        
 
+st.write("---")
 
+# Contact Section
 if selected == "Contact":
     st.header("Get In Touch")
-    st.write("##")
-    st.write("##")
 
     contact_form = """ 
     <form action="https://formsubmit.co/gnanitha_s@outlook.com" method="POST">
@@ -138,4 +146,12 @@ if selected == "Contact":
     with left_col:
         st.markdown(contact_form, unsafe_allow_html=True)
     with right_col:
-        st.lottie(lottie_contact, height=300)
+        st.lottie(lottie_contact, height=200)
+        st.markdown(
+            """
+            <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                <h2>CONTACT US</h2>
+            </div>
+            """, 
+            unsafe_allow_html=True
+        )
