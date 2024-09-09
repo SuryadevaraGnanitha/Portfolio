@@ -117,13 +117,21 @@ if selected == 'Project':
         st.header("My Projects")
         st.write("##")
 
+        with st.expander("Emotion Detection"):
+            st.write("""
+                    Description:
+                    An Emotion Detection Project is aimed at identifying and interpreting human emotions from various inputs such as facial expressions, text, speech, or physiological signals. 
+                     The project involves leveraging artificial intelligence (AI) and machine learning (ML) techniques to analyze and classify emotions into predefined categories, such as happiness, sadness, anger, fear, surprise, and others.   
+                    """)
+                     
+
         # Language Detection Project with a drop-down
         with st.expander("Language Detection"):
             st.write("""
-                **Description:**
+                Description:
                 The Language Detection project is a machine learning-based project that identifies the language of a given text. 
-                The model was trained on a large dataset consisting of text samples from various languages. 
-                It utilizes natural language processing techniques to classify the language with high accuracy.
+                The model was trained on a large dataset of 16GB consisting of audio samples from various languages. 
+                It utilizes natural language processing techniques and basic cnn model to classify the language with high accuracy of 89%.
                 """)
         
 

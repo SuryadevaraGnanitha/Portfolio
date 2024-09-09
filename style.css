@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 .stExpanderHeader {
     font-size: 25px; /* Increase the font size of the expander header */
     font-weight: bold;
-    color: white; /* Dark grey text color */
+    color: rgb(114, 114, 114); /* Dark grey text color */
     padding: 10px 0; /* Increase padding inside the header */
 }
 
