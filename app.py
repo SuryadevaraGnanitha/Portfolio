@@ -32,7 +32,7 @@ lottie_contact = load_lottieurl("https://lottie.host/16479003-a806-40f7-99da-ae8
 
 # Main content of the portfolio
 st.write("##")
-st.title("Portfolio Website")
+st.title("Portfolio")
 st.header("Gnanitha Suryadevara")
 st.subheader("Hey Guys :wave:")
 st.write("---")
@@ -41,7 +41,7 @@ st.write("---")
 with st.container():
     selected = option_menu(
         menu_title=None,
-        options=['About', 'Project', 'Contact'],
+        options=['About', 'Projects', 'Contact'],
         icons=['person', 'code-slash', 'chat-left-text-fill'],
         orientation='horizontal'
     )
@@ -61,7 +61,16 @@ if selected == 'About':
                     data=file,
                     file_name="./gnanitha_suryadevara_resume.pdf",
                     mime="application/pdf"
+
+
                 )
+            st.markdown(
+                """
+                <a href="https://www.linkedin.com/in/gnanitha-suryadevara-8686b624b" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Linkedin_icon.svg" alt="LinkedIn" style="width:30px; margin-top:10px;">
+                    Connect on LinkedIn
+                </a>
+                """, unsafe_allow_html=True)
         with col2:
             st.image("pp.jpeg", caption="Gnanitha Suryadevara", width=500)
     st.write("---")
@@ -112,7 +121,7 @@ if selected == 'About':
                 st.image("./NPTEL_JAVA.jpg")
 
 # Project Section
-if selected == 'Project':
+if selected == 'Projects':
     with st.container():
         st.header("My Projects")
         st.write("##")
