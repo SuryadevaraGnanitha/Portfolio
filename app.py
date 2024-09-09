@@ -144,7 +144,6 @@ if selected == 'Projects':
                 """)
         
 
-st.write("---")
 
 # Contact Section
 if selected == "Contact":
