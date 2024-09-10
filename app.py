@@ -67,7 +67,7 @@ if selected == 'About':
             st.markdown(
                 """
                 <a href="https://www.linkedin.com/in/gnanitha-suryadevara-8686b624b" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Linkedin_icon.svg" alt="LinkedIn" style="width:30px; margin-top:10px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Linkedin_icon.svg" alt="LinkedIn" style="width:25px; margin-right:10px;">
                     Connect on LinkedIn
                 </a>
                 """, unsafe_allow_html=True)
@@ -171,3 +171,4 @@ if selected == "Contact":
             """, 
             unsafe_allow_html=True
         )
+
